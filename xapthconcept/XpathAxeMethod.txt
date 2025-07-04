@@ -1,19 +1,50 @@
-Xpath Axe method->parent child self- represent relationship with the current node.
+Xpath Axe method->(parent child self)- represent relationship with the current node.
 
 Note--> To locate a web element which is not having unique attribute but its parent or child
 contain unique attribute value in such case we use Axe Method of xpath to locate web element.
 
 1.parent-> select parent node of the current node.
-		xpath->//tagName//[@attribute='value']//parent::tagName
+		xpath->//tagName//[@Attribute='value']//parent::tagName
 		
 2.child-> select child node of the current node.		
-		xpath->//tagName[@attribute= 'value']//child::tagName
+		xpath->//tagName[@Attribute= 'value']//child::tagName
 
-3.self-> select the current node
-		xpath->//tagName[@attruibute ='value']//self::tagName		
+3.self -> select the current node
+		xpath->//tagName[@Attruibute ='value']//self::tagName		
 		
+---------------------------------------------------------------------------------------		
+Xpath Axe method->(ancestor, ancestor-or-self)- represent relationship with the current node.		
+
+1. ancestor -> it selects all the ancestors(parent and grandparent) of current Node.
+		xpath-> //tagName=[@Attribute = 'value']//ancestor::tagName
 		
+2. ancestor-or-self ->it select current node with all of its ancestors like(parent,grandparent) 
+if tagName for ancestors & self are same.
+
+		xpath-> //tagName=[@Attribute = 'value']//ancestor-or-self::tagName
+
+---------------------------------------------------------------------------------------		
+Xpath Axe method->(following, following-sibling)- represent relationship with the current node.		
+
+1.following -> It selects all the nodes that appear after the current node.		
+
+		xpath-> //tagName=[@Attribute = 'value']//following::tagName
 		
+2.following-sibling -> It selects all the nodes that have the same parent as the current 
+node & appear after the current node.	
+	
+		xpath-> //tagName=[@Attribute = 'value']//following-sibling::tagName
+	
+---------------------------------------------------------------------------------------------------	
+Xpath Axe method->(preceding, preceding-sibling)- represent relationship with the current node.		
+	
+1.preceding-> it select all the nodes that appears before current node.
+		xpath-> //tagName[@Attribute = 'value']//preceding::tagName
 		
-		
-		
+2.preceding-sibling-> it select all the nodes that have same parent as the current node
+	& appears before current node.
+	
+		xpath->//tagName[@attribute = 'value']//preceding-sibling::tagName
+	
+	
+			
