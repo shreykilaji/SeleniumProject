@@ -1,0 +1,19 @@
+Xpath Axe method->parent child self- represent relationship with the current node.
+
+Note--> To locate a web element which is not having unique attribute but its parent or child
+contain unique attribute value in such case we use Axe Method of xpath to locate web element.
+
+1.parent-> select parent node of the current node.
+		xpath->//tagName//[@attribute='value']//parent::tagName
+		
+2.child-> select child node of the current node.		
+		xpath->//tagName[@attribute= 'value']//child::tagName
+
+3.self-> select the current node
+		xpath->//tagName[@attruibute ='value']//self::tagName		
+		
+		
+		
+		
+		
+		
