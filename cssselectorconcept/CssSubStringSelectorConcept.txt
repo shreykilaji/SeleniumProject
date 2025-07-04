@@ -1,0 +1,22 @@
+# Css Substring Selector->
+
+=> 3 important special character in css substring selector-
+
+1. '^' ->signify the prefix of the text.
+	
+		(Matches the prefix of the text):-
+		Eg-> String= "country_code"
+		syntax->input[name ^= 'country_c']
+
+2. '$' ->signify the suffix of the text.
+
+		(Matches the suffix of the text):-
+		Eg-> String= "country_code"
+		syntax->input[name $= 'ry_code']
+		
+3. '*' ->signify the substring of the text->
+		
+		(Matches the Substring of the text):-
+		Eg-> String= "country_code"
+		syntax->input[name *= 'try_c']
+		
