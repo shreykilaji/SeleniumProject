@@ -1,5 +1,8 @@
 # Css Substring Selector->
 
+Substring matches are very helpful in identifying dynamic element with help of partial string
+matches.
+
 => 3 important special character in css substring selector-
 
 1. '^' ->signify the prefix of the text.
