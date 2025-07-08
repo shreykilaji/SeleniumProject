@@ -1,4 +1,4 @@
-package xapthconcept;
+package learning;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
