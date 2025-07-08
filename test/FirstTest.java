@@ -1,23 +1,39 @@
 package test;
 
+import base.BaseTest;
+import pages.HomePage;
+import pages.LoginPage;
 
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class FirstTest {
+public class FirstTest extends BaseTest {
 	public static void main(String[] args) {
-		
-		//Without browser setup(), Using Selenium Manager Dependency at pom.xml file
-		WebDriver driver = new ChromeDriver();
-		
-		//get() method of WebDriver interface to launch Url in browser.
-		driver.get("https://mvnrepository.com/");
-		
-		//quit() method of WebDriver interface to quit browser.
-		driver.quit();
-		
-		
+
+		/*
+		 * Browser Setup & URL launch using setup() method from BaseTest class which is
+		 * extended here in FirstTest class
+		 */
+		FirstTest test = new FirstTest();
+		test.setup(); // Setup browser driver and launch URL from BaseTest Class's setup() method
+
+		// Login action->(Username, password)
+		LoginPage loginPage = new LoginPage(test.driver);
+		loginPage.login("standard_user", "secret_sauce");
+
+		// <-----Home Page scenario---->
+		HomePage homepage = new HomePage(test.driver);
+		System.out.println("---------------------------------------------------------------------");
+		// Check Home page URL
+		String currentUrl = test.driver.getCurrentUrl();
+		homepage.currentPageUrl(currentUrl);
+
+		// Print Header Text
+		homepage.headerLogoText();
+
+		// Print Header Secondary Text
+		homepage.headerSecondaryText();
+
+		//calling tearDown() method to close browser and end execution
+		test.tearDown();
+
 	}
 
 }
