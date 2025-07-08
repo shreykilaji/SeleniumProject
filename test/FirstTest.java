@@ -9,7 +9,7 @@ public class FirstTest extends BaseTest {
 
 		/*
 		 * Browser Setup & URL launch using setup() method from BaseTest class which is
-		 * extended here in FirstTest class
+		 * extended here in FirstTest class, create object of FirstTest class and use method of base class.
 		 */
 		FirstTest test = new FirstTest();
 		test.setup(); // Setup browser driver and launch URL from BaseTest Class's setup() method
