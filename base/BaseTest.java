@@ -2,17 +2,21 @@ package base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
-	public WebDriver driver;
+	protected WebDriver driver;
 
 //setup() method to setup browser and launch URL---->
+
+	@BeforeTest
 	public void setup() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-
 		// maximize window
 		driver.manage().window().maximize();
 		// launch URL
@@ -24,6 +28,7 @@ public class BaseTest {
 
 	}
 
+	@AfterTest
 //tearDown() method to quit browser---->
 	public void tearDown() {
 		if (driver != null)

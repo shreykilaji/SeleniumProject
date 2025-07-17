@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import base.BaseTest;
 import pages.HomePage;
 import pages.LoginPage;
+import utils.ScreenShotUtils;
 import utils.WaitsUtils;
 
 public class SecondTest extends BaseTest{
@@ -17,6 +18,9 @@ public class SecondTest extends BaseTest{
 		
 		SecondTest test2 =new SecondTest();
 		test2.setup(); // Setup browser driver and launch URL from BaseTest Class's setup() method
+		
+		//capture screenshot using ScreenShotUtils Class's "takeScreenshot(driver, String screenshotName)" method 
+	    ScreenShotUtils.takeScreenshot(test2.driver, "LoginPage");
 		
 		WebElement username = test2.driver.findElement(By.id("user-name"));
 		WaitsUtils.waitForElementToBeVisible(test2.driver, username, 10);
@@ -31,6 +35,11 @@ public class SecondTest extends BaseTest{
 		HomePage homepage = new HomePage(test2.driver);
 		String currentUrl= test2.driver.getCurrentUrl();
 		homepage.currentPageUrl(currentUrl);
+		
+		//capture screenshot using ScreenShotUtils Class's "takeScreenshot(driver, String screenshotName)" method 
+		ScreenShotUtils.takeScreenshot(test2.driver, "HomePage");
+	
+	
 	}
 
 }

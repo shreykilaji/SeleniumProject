@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {
-	WebDriver driver;
+	public WebDriver driver;
 	public String URL = "https://www.saucedemo.com/inventory.html";
 	public String Header = "Swag Labs";
 	public String HeaderSecondary = "Products";
