@@ -1,8 +1,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Suite">
-  <test name="loginAndHomePageTests">
+  <test name="SmokeTest">
+	<groups>
+		<run>
+			<include name="Smoke"></include>
+        	<!-- <include name="Regression"/> -->
+		</run>
+	</groups>	  
     <classes>
-      <class name="tests.TestCase2" />
+      <class name="tests.TestCase3" />
     </classes>
   </test>
 </suite>

@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="loginAndHomePageTests(failed)">
+  <test thread-count="5" name="SmokeTest(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
     <classes>
-      <class name="tests.TestCase2">
+      <class name="tests.TestCase3">
         <methods>
-          <include name="homePage"/>
+          <include name="loginPage"/>
         </methods>
-      </class> <!-- tests.TestCase2 -->
+      </class> <!-- tests.TestCase3 -->
     </classes>
-  </test> <!-- loginAndHomePageTests(failed) -->
+  </test> <!-- SmokeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
